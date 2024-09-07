@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFT Preview Card Component</title>
-
-    <style>
-      .attribution { font-size: 11px; text-align: center; }
-      .attribution a { color: hsl(228, 45%, 44%); }
-    </style>
+    <link rel="stylesheet" href="/src/styles.css">
   </head>
   <body>
     <main>
@@ -19,21 +15,21 @@
         <h1>Equilibrium #3429</h1>
         <p>Our Equilibrium collection promotes balance and calm.</p>
         <div class="details-nft">
-          <span class="eth-price">0.041 ETH</span>
-          <span class="left-time">3 days left</span>
+          <div class="wrapper-price">
+            <img src="/assets/icon-ethereum.svg" alt="icon-ethereum">
+            <span class="eth-price">0.041 ETH</span>
+          </div>
+          <div class="wrapper-time">
+            <img src="/assets/icon-clock.svg" alt="icon-clock">
+            <span class="left-time">3 days left</span>
+          </div>
         </div>
         <hr/>
         <figure class="author">
           <img src="/assets/image-avatar.png" alt="author-avatar">
-          <figcaption>Creation of Jules Wyvern</figcaption>
+          <figcaption>Creation of <span>Jules Wyvern</span></figcaption>
         </figure>
       </article>
     </main>
-
-    <footer>
-      <div class="attribution">
-          coded by <a target="_blank" href="https://github.com/heblopez">@heblopez</a>
-      </div>
-    </footer>
   </body>
 </html>
