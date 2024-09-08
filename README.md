@@ -1,69 +1,80 @@
-# Make It Real - NFT preview card component
+# Make It Real - NFT Preview Card
 
-<img src="./design/desktop-preview.jpg" width="700">
+This is a solution to the **NFT Preview Card** project of the Make It Real course.
 
-## Reto
+## Table of contents
 
-Su desafío es construir este componente de tarjeta de vista previa y lograr que se parezca lo más posible al diseño.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-Puedes usar cualquier herramienta que te guste para ayudarte a completar el desafío. Entonces, si tienes algo que te gustaría practicar, no dudes en intentarlo.
 
-Tus usuarios deberían poder:
+## Overview
 
-- Ver el diseño óptimo según el tamaño de pantalla de su dispositivo
-- Ver hover y focus para elementos interactivos
+### The challenge
 
-## Diseño
+Users should be able to:
 
-Los diseños están en formato JPG estático. El uso de archivos JPG significará que deberá usar su mejor criterio para estilos como "tamaño de fuente", "padding" y "margen".
+- View the optimal design according to your device screen size.
+- View hover for interactive elements.
 
-### Style Guide
+### Screenshot
 
-Los diseños se crearon con los siguientes anchos:
+![Desktop view](/assets/screenshot.png)
 
-- Mobile: 375px
-- Desktop: 1440px
+## My process
 
-## Colores
+### Built with
 
-### Primary
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
 
-- Soft blue: hsl(215, 51%, 70%)
-- Cyan: hsl(178, 100%, 50%)
+### What I learned
 
-### Neutral
+This project especially helped me to reinforce advanced or unusual CSS properties.
 
-- Very dark blue (main BG): hsl(217, 54%, 11%)
-- Very dark blue (card BG): hsl(216, 50%, 16%)
-- Very dark blue (line): hsl(215, 32%, 27%)
-- White: hsl(0, 0%, 100%)
+```html
+  <figure class="nft-image">
+    <img src="/assets/image-equilibrium.jpg" alt="NFT-image">
+    <img class="view-icon" src="/assets/icon-view.svg" alt="view-icon">
+  </figure>
+```
+```css
+  .nft-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cyan);
+    mix-blend-mode: hard-light;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+```
 
-## Tipografía
+### Continued development
 
-### Body Copy
+Working on this project made me realize that there are still advanced CSS topics to learn, such as the `mix-blend-mode` property that sets how the content of an element should blend with its background color.
 
-- Font size (paragraph): 18px
+### Useful resources
 
-### Font
+- [mix-blend-mode - CSS](https://developer.mozilla.org/es/docs/Web/CSS/mix-blend-mode) - This CSS property helped me to make the hover effect of the card.
 
-- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
-- Weights: 300, 400, 600
+## Author
 
-## Construyendo tu proyecto
+- Website - [Heberth López](https://www.heblopez.web.app)
 
-Siéntase libre de usar cualquier flujo de trabajo con el que se sienta cómodo. A continuación se sugiere un proceso, pero no sienta que necesita seguir estos pasos:
+## Acknowledgments
 
-1. Inicializa tu proyecto como repositorio público en [GitHub](https://github.com/). La creación de un repositorio hará que sea más fácil compartir su código con la comunidad si necesita ayuda. Si no está seguro de cómo hacer esto, [lea este recurso](https://guias.makeitreal.camp/git) .
-2. Mire los diseños para comenzar a planificar cómo abordará el proyecto. Este paso es crucial para ayudarlo a pensar con anticipación en las clases de CSS para crear estilos reutilizables.
-3. Antes de agregar estilos, estructura tu contenido con HTML. Escribir tu HTML primero puede ayudar a centrar tu atención en crear contenido bien estructurado.
-4. Escriba los estilos base para su proyecto, incluidos los estilos de contenido general, como `font-family` y `font-size`.
-5. Comience a agregar estilos en la parte superior de la página y siga hacia abajo. Pase a la siguiente sección solo cuando esté satisfecho de haber completado el área en la que está trabajando.
-
-## Crea un `README.md` personalizado
-
-Recomendamos encarecidamente sobrescribir este `README.md` con uno personalizado. Proporcionamos una plantilla dentro del archivo [`README-template.md`](./README-template.md) en este código de inicio.
-
-La plantilla proporciona una guía sobre qué agregar. Un `README` personalizado lo ayudará a explicar su proyecto y reflexionar sobre sus aprendizajes. Por favor, siéntete libre de editar nuestra plantilla tanto como quieras.
-
-**¡Diviértete construyendo!** 🚀
-
+A special thanks to the MakeItReal team for the knowledge and support provided in each class and the feedback received on each project.
