@@ -62,7 +62,7 @@ article {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 450px;
+  max-width: 448px;
   margin: 0 auto;
 
   &:hover {
@@ -72,9 +72,41 @@ article {
   }
 }
 
-figure {
+.nft-image {
   border-radius: 8px;
   overflow: hidden;
+  position: relative;
+  transition: filter 0.5s ease;
+
+  .view-icon {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    opacity: 0;
+  }
+
+  &:hover {
+    .view-icon {
+      opacity: 1;
+    }
+  }
+}
+
+.nft-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(178, 100%, 50%);
+  mix-blend-mode: hard-light;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.nft-image:hover::before {
+  opacity: 0.4;
 }
 
 article h1 {
